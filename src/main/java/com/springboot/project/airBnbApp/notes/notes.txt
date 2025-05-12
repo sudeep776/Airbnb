@@ -1,0 +1,8 @@
+Hotel - object
+hotel has hotelcontactinfo as embedded
+
+HotelContactInfo - it is an embedded
+
+Hotel ---> Room  (One to Many Mapping)
+One Hotel can have multiple room types
+

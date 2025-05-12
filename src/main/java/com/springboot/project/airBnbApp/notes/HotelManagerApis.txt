@@ -1,0 +1,14 @@
+1st phase - Setup Hotel Manager Apis
+Hotel
+Room
+Inventory
+
+Response handlers to manage errors and api response
+
+Hotel Apis --> dtos
+Create , GetbyId , Update and Delete
+
+
+
+
+
