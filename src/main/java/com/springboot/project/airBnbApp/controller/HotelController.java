@@ -38,9 +38,9 @@ public class HotelController {
         return new ResponseEntity<>(hotel,HttpStatus.OK);
     }
 
-    @DeleteMapping("/hotelId")
-    public ResponseEntity<Void> deleteHotelById(Long id){
-        hotelService.deleteHotelById(id);
+    @DeleteMapping("/{hotelId}")
+    public ResponseEntity<Void> deleteHotelById(@PathVariable Long hotelId){
+        hotelService.deleteHotelById(hotelId);
         return ResponseEntity.noContent().build();
     }
 
@@ -49,4 +49,6 @@ public class HotelController {
         hotelService.activateHotel(hotelId);
         return ResponseEntity.noContent().build();
     }
+
+
     }

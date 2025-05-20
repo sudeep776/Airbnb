@@ -1,6 +1,5 @@
 package com.springboot.project.airBnbApp.service.impl;
 
-import com.springboot.project.airBnbApp.dto.HotelDto;
 import com.springboot.project.airBnbApp.dto.RoomDto;
 import com.springboot.project.airBnbApp.entity.Hotel;
 import com.springboot.project.airBnbApp.entity.Room;
@@ -69,7 +68,7 @@ public class RoomServiceImpl implements RoomService {
     public void deleteRoomById(Long roomId) {
         log.info("Deleting room with id : {}",roomId);
         Room room = roomRepository.findById(roomId).orElseThrow(()->new ResourceNotFoundException("Room not found with id : "+roomId));
-        inventoryService.deleteFutureInventories(room);
+        inventoryService.deleteAllInventories(room);
         roomRepository.deleteById(roomId);
         //TODO : to be checked
     }

@@ -38,6 +38,9 @@ public class Inventory {
     @Column(nullable = false,precision = 10, scale = 2)
     private Integer bookedCount;
 
+    @Column(nullable = false,precision = 10, scale = 2)
+    private Integer reservedCount;
+
     @Column(nullable = false)
     private Integer totalCount;
 
